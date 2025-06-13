@@ -1,0 +1,8 @@
+{
+  "name": "AI Web Accessibility Suite",
+  "description": "An AI-powered toolkit to help make the web more inclusive by analyzing content, suggesting improvements for accessibility, and providing assistance through various input modalities.",
+  "requestFramePermissions": [
+    "microphone"
+  ],
+  "prompt": ""
+}

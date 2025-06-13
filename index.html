@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Web Accessibility Suite</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      darkMode: 'class', // Enable class-based dark mode
+      theme: {
+        extend: {
+          colors: {
+            primary: {
+              light: '#60a5fa', // blue-400
+              DEFAULT: '#3b82f6', // blue-500
+              dark: '#2563eb', // blue-600
+            },
+            secondary: {
+              light: '#34d399', // emerald-400
+              DEFAULT: '#10b981', // emerald-500
+              dark: '#059669', // emerald-600
+            },
+            neutral: {
+              light: '#f3f4f6', // gray-100
+              DEFAULT: '#d1d5db', // gray-300
+              dark: '#374151', // gray-700
+              // Dark mode specific shades
+              darker: '#111827', // gray-900 (example for deep background)
+              'dark-accent': '#1f2937', // gray-800 (example for card backgrounds)
+              'light-accent': '#e5e7eb' // gray-200 (example for dark mode text)
+            },
+            accent: '#f59e0b', // amber-500
+          },
+          animation: {
+            'spin-slow': 'spin 3s linear infinite',
+          },
+        }
+      }
+    }
+  </script>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.1.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.0/",
+    "react/": "https://esm.sh/react@^19.1.0/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.0.1"
+  }
+}
+</script>
+</head>
+<body class="bg-neutral-light dark:bg-neutral-darker text-neutral-dark dark:text-neutral-light-accent font-sans transition-colors duration-300">
+  <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html><link rel="stylesheet" href="index.css">
+<script src="index.tsx" type="module"></script>
