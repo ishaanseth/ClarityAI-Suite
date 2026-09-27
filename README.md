@@ -1,8 +1,6 @@
 
 # ClarityAI Suite
 
-**Live Application Link:** [https://clarityai-suite-763028360616.us-west1.run.app/](https://clarityai-suite-763028360616.us-west1.run.app/)
-
 ClarityAI Suite is an innovative web application designed to enhance digital accessibility for users with diverse needs. Leveraging the power of Google's Gemini AI, this toolkit provides a suite of features to help make web content more understandable and navigable.
 
 ## ✨ Features
@@ -57,38 +55,34 @@ The application supports voice commands for navigation and interaction:
     *   **Text Simplifier:** After entering text, say "Simplify text." You can also say "Input text [your text here]" or "Simplify this text [your text here]".
     *   **Video Describer:** After entering a prompt, say "Describe video" or "Summarize video." You can also say "Input prompt [your prompt here]".
 
-## 🛠️ Setup and Running Locally (for Developers)
+## 🛠️ Running Locally
 
-While the application is hosted live, if you wish to run it locally:
+This project is not currently hosted anywhere; run it on your own machine:
 
-1.  **Prerequisites:**
-    *   Node.js and npm (or yarn) installed.
+1.  **Prerequisites:** Node.js (v18+) and npm.
 2.  **Clone the repository:**
     ```bash
-    git clone [URL_OF_YOUR_GITHUB_REPO]
-    cd [REPOSITORY_DIRECTORY]
+    git clone https://github.com/ishaanseth/ClarityAI-Suite.git
+    cd ClarityAI-Suite
     ```
 3.  **Install dependencies:**
     ```bash
     npm install
-    # or
-    # yarn install
     ```
-4.  **Set up API Key:**
-    *   This application uses the Google Gemini API. You will need an API key.
-    *   Create a `.env` file in the root of the project.
-    *   Add your API key to the `.env` file:
+4.  **Set up your Gemini API key:**
+    *   Get a key from [Google AI Studio](https://aistudio.google.com/app/apikey).
+    *   Create a file named `.env.local` in the project root containing:
         ```
-        API_KEY=YOUR_GEMINI_API_KEY
+        GEMINI_API_KEY=your_gemini_api_key
         ```
-    *   The application is configured to pick up `process.env.API_KEY`.
+    *   Vite injects this into the app at build time as `process.env.API_KEY`.
 5.  **Start the development server:**
     ```bash
-    npm start
-    # or
-    # yarn start
+    npm run dev
     ```
-    This will typically open the application in your default web browser at `http://localhost:3000` (or another port if configured).
+    Open the local URL Vite prints (usually `http://localhost:5173`).
+
+To create a production build instead, run `npm run build` and serve the `dist/` folder with `npm run preview`.
 
 ## 💻 Technologies Used
 
